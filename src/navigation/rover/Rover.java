@@ -1,6 +1,8 @@
 package navigation.rover;
 import navigation.Direction;
 import navigation.Position;
+import navigation.rover.movers.RoverMover;
+import navigation.rover.movers.RoverMoverFactory;
 import navigation.world.World;
 
 public class Rover {
@@ -26,4 +28,9 @@ public class Rover {
     return direction;
   }
 
+  public void moveForward() {
+    RoverMoverFactory roverMoverFactory = new RoverMoverFactory();
+    RoverMover roverMover = roverMoverFactory.createRoverMover(this.direction);
+    roverMover.move(this);
+  }
 }
