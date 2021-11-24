@@ -45,4 +45,20 @@ public class Position {
     this.y = y;
   }
 
+  public void goNorth() {
+    this.y += 1;
+  }
+
+  public void goSouth() {
+    this.y -= 1;
+  }
+
+  public void goEast() {
+    this.x += 1;
+  }
+
+  public void goWest() {
+    this.x -= 1;
+  }
+
 }
