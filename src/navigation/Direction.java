@@ -28,4 +28,22 @@ public enum Direction {
     return this.directionCode;
   }
 
+  public Direction directionOnLeft() {
+    int codeOfDirectionOnLeft = (this.directionCode + 1) % (Direction.values().length);
+    
+    return codeToDirection.get(
+      codeOfDirectionOnLeft
+    );
+  }
+
+  public Direction directionOnRight() {
+    int codeOfDirectionOnRight = 
+      (this.directionCode + Direction.values().length - 1) %
+      (Direction.values().length);
+
+    return codeToDirection.get(
+      codeOfDirectionOnRight
+    );
+  }
+
 }
