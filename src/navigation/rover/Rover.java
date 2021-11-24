@@ -28,6 +28,14 @@ public class Rover {
     return direction;
   }
 
+  public void rotateLeft() {
+    this.direction = direction.directionOnLeft();
+  }
+
+  public void rotateRight() {
+    this.direction = direction.directionOnRight();
+  }
+
   public void moveForward() {
     RoverMoverFactory roverMoverFactory = new RoverMoverFactory();
     RoverMover roverMover = roverMoverFactory.createRoverMover(this.direction);
