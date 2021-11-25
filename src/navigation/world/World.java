@@ -41,4 +41,20 @@ public class World {
       !occupiedPositions[position.getX()][position.getY()];
   }
 
+  public void setPosition(Position position) throws IllegalStateException {
+    if (!isPositionOccupied(position)) {
+      occupiedPositions[position.getX()][position.getY()] = true;
+      return; 
+    }
+    throw new IllegalStateException("Can't set position already set in World class");
+  }
+
+  public void resetPosition(Position position) throws IllegalStateException {
+    if (!isPositionOccupied(position)) {
+      occupiedPositions[position.getX()][position.getY()] = false;
+      return; 
+    }
+    throw new IllegalStateException("Can't reset position already reset in World class");
+  }
+
 }

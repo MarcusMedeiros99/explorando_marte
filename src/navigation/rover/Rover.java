@@ -14,6 +14,7 @@ public class Rover {
   protected Direction direction;
 
   public Rover(Position position, Direction direction, World world) {
+    world.setPosition(position);
     this.world = world;
     this.position = position;
     this.direction = direction;
