@@ -26,19 +26,22 @@ public class InputReader {
     environment = new Environment();
   }
 
-  private static void readWorldFromFile() {
-    Position topRightCorner = new Position();
-    topRightCorner.setX(reader.nextInt());
-    topRightCorner.setY(reader.nextInt());
+  private static Position readPositionFromFile() {
+    Position position = new Position();
 
+    position.setX(reader.nextInt());
+    position.setY(reader.nextInt());
+
+    return position;
+  }
+
+  private static void readWorldFromFile() {
+    Position topRightCorner = readPositionFromFile();
     environment.setWorld(new World(topRightCorner)); 
   }
 
   private static void readRoverFromFile() {
-    Position initialPosition = new Position();
-
-    initialPosition.setX(reader.nextInt()); 
-    initialPosition.setY(reader.nextInt());
+    Position initialPosition = readPositionFromFile();
 
     Direction direction = CharToDirection
                             .getMapping()
