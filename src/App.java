@@ -1,6 +1,6 @@
 import controller.InputReader;
-import controller.OutputWriter;
 import navigation.Environment;
+import view.OutputWriter;
 
 public class App {
     public static void main(String[] args) throws Exception {

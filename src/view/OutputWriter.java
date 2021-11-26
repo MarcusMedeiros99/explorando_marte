@@ -1,4 +1,4 @@
-package controller;
+package view;
 
 import navigation.Environment;
 import navigation.rover.Rover;
