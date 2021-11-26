@@ -44,7 +44,6 @@ public class InputReader {
     Position initialPosition = readPositionFromFile();
 
     Direction direction = CharToDirection
-                            .getMapping()
                             .get(reader.next().charAt(0));
 
     Rover rover = new Rover(initialPosition, direction, environment.getWorld());
@@ -55,7 +54,7 @@ public class InputReader {
     String roverMoves = reader.next();
 
     for (char move : roverMoves.toCharArray()) {
-      CommandCode commandCode = CharToCommandCode.getMapping().get(move);
+      CommandCode commandCode = CharToCommandCode.get(move);
       Command command = new CommandFactory().createCommand(commandCode);
 
       command.execute(environment.getRovers().get(environment.getRovers().size() - 1));
