@@ -36,4 +36,8 @@ public class CharToCommandCode {
     return mapping;
   }
 
+  public static CommandCode get(Character character) {
+    return mapping.get(character);
+  }
+
 }

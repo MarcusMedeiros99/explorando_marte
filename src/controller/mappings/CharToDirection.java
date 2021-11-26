@@ -37,4 +37,8 @@ public class CharToDirection {
     return mapping;
   }
 
+  public static Direction get(Character character) {
+    return mapping.get(character);
+  }
+
 }

@@ -35,4 +35,8 @@ public class CharToRotation {
     return mapping;
   }
 
+  public static Rotation get(Character character) {
+    return mapping.get(character);
+  }
+
 }
