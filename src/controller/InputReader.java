@@ -47,7 +47,7 @@ public class InputReader {
                             .get(reader.next().charAt(0));
 
     Rover rover = new Rover(initialPosition, direction, environment.getWorld());
-    environment.getRovers().add(rover);
+    environment.addRover(rover);;
   }
 
   private static void readRoverCommandsFromFile() {
