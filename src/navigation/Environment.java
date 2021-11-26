@@ -32,4 +32,8 @@ public class Environment {
   public Rover getLastRover() {
     return rovers.get(rovers.size() - 1);
   }
+
+  public void addRover(Rover rover) {
+    rovers.add(rover);
+  }
 }
