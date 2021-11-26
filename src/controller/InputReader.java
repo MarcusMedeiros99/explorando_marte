@@ -57,7 +57,7 @@ public class InputReader {
       CommandCode commandCode = CharToCommandCode.get(move);
       Command command = new CommandFactory().createCommand(commandCode);
 
-      command.execute(environment.getRovers().get(environment.getRovers().size() - 1));
+      command.execute(environment.getLastRover());
     }
   }
 
