@@ -28,4 +28,8 @@ public class Environment {
   public void setWorld(World world) {
     this.world = world;
   }
+
+  public Rover getLastRover() {
+    return rovers.get(rovers.size() - 1);
+  }
 }
