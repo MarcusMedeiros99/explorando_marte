@@ -28,8 +28,16 @@ public class Rover {
     return world;
   }
 
+  public void setWorld(World world) {
+      this.world = world;
+  }
+
   public Direction getDirection() {
     return direction;
+  }
+  
+  public void setDirection(Direction direction) {
+      this.direction = direction;
   }
 
   public void rotateLeft() {
