@@ -13,6 +13,11 @@ public class Environment {
     this.rovers = new ArrayList<Rover>();
   }
   
+  public Environment(Position topRightCorner) {
+    this.rovers = new ArrayList<Rover>();
+    this.world = new World(topRightCorner);
+  }
+  
   public ArrayList<Rover> getRovers() {
     return rovers;
   }
