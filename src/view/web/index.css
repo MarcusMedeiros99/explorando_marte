@@ -1,0 +1,39 @@
+.mars-grid-container {
+  margin: auto;
+  border-radius: 2vw;
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+.mars-grid .row {
+  margin: 0;
+}
+
+.mars-grid div div {
+  padding: 0;
+  line-height: 100px;
+  width: 100px;
+  background: red;
+}
+.mars-grid div div:hover {
+  background: rgba(255, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.mars-grid div:first-of-type div:first-of-type {
+  border-radius: 2vw 0px 0px 0px;
+}
+
+.mars-grid div:first-of-type div:last-of-type {
+  border-radius: 0vw 2vw 0px 0px;
+}
+
+.mars-grid div:last-of-type div:first-of-type {
+  border-radius: 0vw 0px 0px 2vw;
+}
+
+.mars-grid div:last-of-type div:last-of-type {
+  border-radius: 0vw 0px 2vw 0px;
+}
+
+/*# sourceMappingURL=index.css.map */
