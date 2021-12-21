@@ -20,6 +20,7 @@ public class AddRoverEvent implements Event {
         rover.setDirection(Direction.NORTH);
         rover.setWorld(RoverEndpoint.getEnvironment().getWorld());
         RoverEndpoint.getEnvironment().addRover(rover);
+        RoverEndpoint.getEnvironment().getWorld().setPosition(rover.getPosition());
     }
 
 }
