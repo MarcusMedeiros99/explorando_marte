@@ -1,1 +1,5 @@
 node_modules/
+scripts/script.bundle.js
+scripts/script.bundle.js.map
+index.css.map
+index.scss
