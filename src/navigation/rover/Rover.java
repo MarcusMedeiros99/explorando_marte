@@ -4,8 +4,8 @@ import navigation.Position;
 import navigation.Rotation;
 import navigation.rover.movers.RoverMover;
 import navigation.rover.movers.RoverMoverFactory;
-import navigation.rover.rotators.RoverRotator;
-import navigation.rover.rotators.RoverRotatorFactory;
+// import navigation.rover.rotators.RoverRotator;
+// import navigation.rover.rotators.RoverRotatorFactory;
 import navigation.world.World;
 
 public class Rover {
@@ -28,8 +28,16 @@ public class Rover {
     return world;
   }
 
+  public void setWorld(World world) {
+      this.world = world;
+  }
+
   public Direction getDirection() {
     return direction;
+  }
+  
+  public void setDirection(Direction direction) {
+      this.direction = direction;
   }
 
   public void rotateLeft() {
@@ -47,8 +55,15 @@ public class Rover {
   }
 
   public void rotate(Rotation rotation) {
-    RoverRotatorFactory roverRotatorFactory = new RoverRotatorFactory();
-    RoverRotator roverRotator = roverRotatorFactory.createRoverRotator(rotation);
-    roverRotator.rotate(this);
+    switch (rotation) {
+      case LEFT:
+        rotateLeft();
+        break;
+      case RIGHT:
+        rotateRight();
+        break;
+      default:
+        break;
+    }
   }
 }
