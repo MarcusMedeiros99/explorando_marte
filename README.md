@@ -91,10 +91,12 @@ Uma string representando o nome do evento. Pode assumir um dos seguintes valores
 ### event
 ## AddRoverEvent
 ```javascript
-rover: {
-	position: {
-		x: int,
-		y: int
+{
+	rover: {
+		position: {
+			x: int,
+			y: int
+		}
 	}
 }
 ```
@@ -104,12 +106,12 @@ rover: {
 Evento enviado de volta quando a conexão com o socket é feita. Serve para verificar se já existe um Environment com mapa e sondas.
 
 ```javascript
-
-environment: {
-	world: {
-		topRightCorner: 
-			x: int,
-			y: int
+{
+	environment: {
+		world: {
+			topRightCorner: {
+				x: int,
+				y: int
 		},
 		occupiedPositions: boolean[][],
 		rovers: rover[] //rover mostrado em AddRoverEvent
