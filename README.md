@@ -1,13 +1,16 @@
 # Explorando Marte
 
-Esse é um projeto usado para a demonstração de conceitos de POO e design de projetos utilizando Java. Os requisitos funcionais iniciais do projeto podem ser encontrados em https://gist.github.com/elo7-developer/1a40c96a5d062b69f02c . O jogo foi adaptado para funcionar através de entradas via websocket.
+Esse é um projeto usado para a demonstração de conceitos de POO e design de projetos utilizando Java. Os requisitos funcionais iniciais do projeto podem ser encontrados em https://gist.github.com/elo7-developer/1a40c96a5d062b69f02c . O jogo foi adaptado para funcionar através de entradas via websocket e ser utilizado pelo navegador.
 
 
 ## Antes de rodar
 O programa foi testado utilizando:
-    - Java SE 11
-    - Apache Maven 3.8.4
-    - Apache Tomcat 10.0.14
+
+-	Java SE 11
+-	Apache Maven 3.8.4
+-	Apache Tomcat 10.0.14
+
+A instalação dessas aplicações deve ser feita antes dos passos abaixo.
 
 ## Instalação
 
@@ -23,13 +26,13 @@ Alternativamente, com ssh:
 git pull git@github.com:MarcusMedeiros99/explorando_marte.git
 ```
 
-### Use o Maven para instalar dependências e gerar um arquivo WAR
+### Execute o script 'build.sh'
 
 Dentro da pasta do repositório:
 
 ```bash
-
-    mvn package -f pom.xml
+	chmod 764 build.sh
+	build.sh
 
 ```
 
@@ -37,7 +40,21 @@ Uma pasta ```bin``` deve ter sido criada e dentro dela, um arquivo .WAR. Use o m
 
 ## Interface gráfica
 
-Em desenvolvimento.
+Após a instalação, a aplicação pode ser acessada pelo navegador via http://localhost:8080/explorandomarte-1.0-SNAPSHOT/ 
+
+### Criação de um mapa
+Insira as dimensões do mapa nos campos adequados e clique em "Novo Mundo"
+
+### Inserção de uma sonda
+Basta clicar em um dos quadrados, e uma sonda será inserida.
+
+###  Movimentação da sonda
+A nave deve ser selecionada antes de poder ser movimentada. Basta clicar para selecioná-la.
+-	W: mover para frente
+-	Q: girar para a esquerda
+-	E: girar para a direita
+
+**Bug visual conhecido:** atualmente, a imagem da nave sempre aponta para o NORTE, mesmo que ela aponte para outra direção. No entanto, isso não interfere nos comandos.
 
 ## API
 
