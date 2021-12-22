@@ -17,13 +17,13 @@ A instalação dessas aplicações deve ser feita antes dos passos abaixo.
 ### Baixe o repositório
 
 ```bash
-git pull https://github.com/MarcusMedeiros99/explorando_marte.git
+git clone https://github.com/MarcusMedeiros99/explorando_marte.git
 ```
 
 Alternativamente, com ssh:
 
 ```bash
-git pull git@github.com:MarcusMedeiros99/explorando_marte.git
+git clone git@github.com:MarcusMedeiros99/explorando_marte.git
 ```
 
 ### Execute o script 'build.sh'
@@ -32,7 +32,7 @@ Dentro da pasta do repositório:
 
 ```bash
 	chmod 764 build.sh
-	build.sh
+	./build.sh
 
 ```
 
